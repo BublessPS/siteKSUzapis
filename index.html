@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Онлайн-запись на консультации</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="background"></div>
+    <main class="layout">
+      <header class="app-header">
+        <div class="brand">
+          <span class="brand-mark">KSU</span>
+          <div>
+            <h1>Онлайн-запись студентов</h1>
+            <p>Консультации преподавателей</p>
+          </div>
+        </div>
+        <div id="userBadge" class="user-badge hidden"></div>
+      </header>
+
+      <section id="loginView" class="panel auth-panel">
+        <h2>Вход в систему</h2>
+        <p class="panel-subtitle">
+          Демо-режим: проверка логина и пароля выполняется по данным из
+          отдельного файла базы.
+        </p>
+        <form id="loginForm" class="form">
+          <label>
+            Логин
+            <input id="loginInput" name="login" type="text" required />
+          </label>
+          <label>
+            Пароль
+            <input id="passwordInput" name="password" type="password" required />
+          </label>
+          <button class="btn primary" type="submit">Войти</button>
+        </form>
+        <p id="loginError" class="error hidden">
+          Неверный логин или пароль.
+        </p>
+        <div class="demo-accounts">
+          <h3>Демо-аккаунты</h3>
+          <ul>
+            <li>Студент: <code>student1 / student123</code></li>
+            <li>Преподаватель: <code>teacher1 / teacher123</code></li>
+            <li>Администратор: <code>admin / admin123</code></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="appView" class="panel hidden">
+        <div class="toolbar">
+          <nav id="tabNav" class="tab-nav"></nav>
+          <div class="toolbar-actions">
+            <button id="resetDemoBtn" class="btn ghost" type="button">
+              Сброс демо-данных
+            </button>
+            <button id="logoutBtn" class="btn danger" type="button">Выход</button>
+          </div>
+        </div>
+        <div id="tabContent"></div>
+      </section>
+    </main>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>

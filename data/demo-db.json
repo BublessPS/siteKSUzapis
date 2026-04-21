@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "id": "student-1",
+      "role": "student",
+      "name": "Иван Петров",
+      "login": "student1",
+      "password": "student123",
+      "group": "ИВТ-21"
+    },
+    {
+      "id": "student-2",
+      "role": "student",
+      "name": "Мария Соколова",
+      "login": "student2",
+      "password": "student456",
+      "group": "ИВТ-22"
+    },
+    {
+      "id": "teacher-1",
+      "role": "teacher",
+      "name": "Анна Смирнова",
+      "login": "teacher1",
+      "password": "teacher123",
+      "subject": "Программирование"
+    },
+    {
+      "id": "teacher-2",
+      "role": "teacher",
+      "name": "Олег Кузнецов",
+      "login": "teacher2",
+      "password": "teacher456",
+      "subject": "Базы данных"
+    },
+    {
+      "id": "admin-1",
+      "role": "admin",
+      "name": "Системный администратор",
+      "login": "admin",
+      "password": "admin123"
+    }
+  ],
+  "slots": [
+    {
+      "id": "slot-1",
+      "teacherId": "teacher-1",
+      "date": "2026-04-23",
+      "time": "10:00",
+      "durationMin": 30,
+      "status": "open"
+    },
+    {
+      "id": "slot-2",
+      "teacherId": "teacher-1",
+      "date": "2026-04-23",
+      "time": "12:00",
+      "durationMin": 30,
+      "status": "open"
+    },
+    {
+      "id": "slot-3",
+      "teacherId": "teacher-2",
+      "date": "2026-04-24",
+      "time": "11:00",
+      "durationMin": 40,
+      "status": "open"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "booking-1",
+      "slotId": "slot-3",
+      "studentId": "student-1",
+      "status": "active",
+      "createdAt": "2026-04-20T08:00:00.000Z"
+    }
+  ]
+}
